@@ -18,7 +18,7 @@ class GooglePlaceFieldtype extends Fieldtype
 
     public function preload()
     {
-        return ['fetch_url' => '/plugrbase-places'];
+        return ['fetch_url' => '/cp/plugrbase/google-places-field'];
     }
 
     /**
