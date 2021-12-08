@@ -212,7 +212,9 @@ var render = function () {
       1
     ),
     _vm._v(" "),
-    _c("div", { ref: "fetch_status", staticClass: "py-1 text-small" }),
+    _c("div", { ref: "fetch_status", staticClass: "py-1 text-small" }, [
+      _vm._v("Provide a Google Place Id or a search string"),
+    ]),
   ])
 }
 var staticRenderFns = []

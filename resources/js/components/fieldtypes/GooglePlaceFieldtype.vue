@@ -7,7 +7,7 @@
             Fetch
         </button>
     </div>
-    <div ref="fetch_status" class="py-1 text-small"></div>
+    <div ref="fetch_status" class="py-1 text-small">Provide a Google Place Id or a search string</div>
   </div>
 </template>
 <script>
