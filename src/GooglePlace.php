@@ -1,7 +1,8 @@
 <?php
 
-namespace Plugrbase\GooglePlace;
+namespace Plugrbase\GooglePlacesField;
 
+use Exception;
 use SKAgarwal\GoogleApi\PlacesApi;
 
 class GooglePlace
@@ -23,5 +24,45 @@ class GooglePlace
         }
 
         $this->placeApi = new PlacesApi(config('statamic.google_place_field.gmap_api_key'));
+    }
+
+    /**
+     * Get place data.
+     *
+     * @param string $place
+     *
+     * @return \Illuminate\Support\Collection|null
+     */
+    public function getData(string $place)
+    {
+        if ($placeData = $this->findPlace($place)) {
+            return isset($placeData[0]['place_id']) ? $this->placeApi->placeDetails($placeData[0]['place_id']) : null;
+        }
+
+        try {
+            return $this->placeApi->placeDetails($place);
+        } catch (Exception $e) {
+            return null;
+        }
+
+        return null;
+    }
+
+    /**
+     * Find a place from search string.
+     *
+     * @param string $input
+     *
+     * @return \Illuminate\Support\Collection|null
+     */
+    public function findPlace($input)
+    {
+        $places = $this->placeApi->findPlace($input, 'textquery');
+
+        if (!$places->get('candidates')->count()) {
+            return null;
+        }
+
+        return collect(array_values($places->get('candidates')->all()));
     }
 }

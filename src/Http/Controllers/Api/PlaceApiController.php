@@ -2,8 +2,8 @@
 
 namespace Plugrbase\GooglePlacesField\Http\Controllers\Api;
 
-use Exception;
 use App\Http\Controllers\Controller;
+use Plugrbase\GooglePlacesField\GooglePlace;
 use Plugrbase\GooglePlacesField\Http\Resources\PlaceResource;
 use SKAgarwal\GoogleApi\PlacesApi;
 
@@ -19,19 +19,13 @@ class PlaceApiController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  string  $placeId
+     * @param  string  $place
      * @return \Illuminate\Http\Response
      */
-    public function show($placeId)
+    public function show($place)
     {
         $this->placeApi = new PlacesApi(config('statamic.google_place_field.gmap_api_key'));
-
-        try {
-            $places = $this->placeApi->placeDetails($placeId);
-        } catch (Exception $e) {
-            return [];
-        }
-        
+        $places = (new GooglePlace())->getData($place);
         return new PlaceResource($places);
     }
 }
