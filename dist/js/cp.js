@@ -60,7 +60,7 @@ __webpack_require__.r(__webpack_exports__);
           _this.value.content = JSON.stringify(response.data.result);
           _this.$refs.fetch_status.innerHTML = "Data fetched successfully: <em>" + response.data.result.name + "</em>";
         } else {
-          _this.$refs.fetch_status.innerHTML = response;
+          _this.$refs.fetch_status.innerHTML = "No data found for the requested search";
         }
       })["catch"](function (err) {
         _this.$refs.fetch_status.innerHTML = "No data found for the requested search";

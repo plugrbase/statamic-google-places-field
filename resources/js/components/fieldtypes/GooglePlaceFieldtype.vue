@@ -48,7 +48,7 @@ export default {
           this.value.content = JSON.stringify(response.data.result);
           this.$refs.fetch_status.innerHTML = "Data fetched successfully: <em>" + response.data.result.name + "</em>";
         } else {
-          this.$refs.fetch_status.innerHTML = response;
+          this.$refs.fetch_status.innerHTML = "No data found for the requested search";
         }
       })
       .catch((err) => {
