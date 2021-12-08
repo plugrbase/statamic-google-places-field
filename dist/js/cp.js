@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         if (response.data.result) {
           _this.value.content = JSON.stringify(response.data.result);
-          _this.$refs.fetch_status.innerHTML = "Data fetched successfully: <em>" + response.data.result.name + "</em>";
+          _this.$refs.fetch_status.innerHTML = "Data fetched successfully: <em>" + response.data.result.name + " (" + response.data.result.formatted_address + ")</em>";
         } else {
           _this.$refs.fetch_status.innerHTML = "No data found for the requested search";
         }

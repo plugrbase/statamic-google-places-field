@@ -46,7 +46,7 @@ export default {
       .then((response) => {
         if (response.data.result) {
           this.value.content = JSON.stringify(response.data.result);
-          this.$refs.fetch_status.innerHTML = "Data fetched successfully: <em>" + response.data.result.name + "</em>";
+          this.$refs.fetch_status.innerHTML = "Data fetched successfully: <em>" + response.data.result.name + " (" + response.data.result.formatted_address + ")</em>";
         } else {
           this.$refs.fetch_status.innerHTML = "No data found for the requested search";
         }
