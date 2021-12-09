@@ -15,6 +15,6 @@ class GPlaceData extends Tags
             return 'The text input specifying which place to search for is missing.';
         }
 
-        return collect(json_decode($data));
+        return collect(json_decode($data, true));
     }
 }
