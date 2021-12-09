@@ -17,7 +17,6 @@ phpcs.xml
 build
 composer.lock
 coverage
-docs
 phpstan.neon
 testbench.yaml
 /vendor
