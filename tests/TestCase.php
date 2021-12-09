@@ -30,8 +30,8 @@ abstract class TestCase extends OrchestraTestCase
         parent::getEnvironmentSetUp($app);
 
         $app->make(Manifest::class)->manifest = [
-            'plugrbase/plugrman' => [
-                'id' => 'plugrbase/plugrman',
+            'plugrbase/statamic-google-places-field' => [
+                'id' => 'plugrbase/statamic-google-places-field',
                 'namespace' => 'Plugrbase\\GooglePlacesField\\',
             ],
         ];
