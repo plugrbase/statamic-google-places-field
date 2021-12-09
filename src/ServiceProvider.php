@@ -23,8 +23,10 @@ class ServiceProvider extends AddonServiceProvider
         'cp' => __DIR__.'/../routes/cp.php',
     ];
 
-    public function bootAddon()
+    public function boot()
     {
+        parent::boot();
+        
         $this->bootAddonConfig();
     }
 
