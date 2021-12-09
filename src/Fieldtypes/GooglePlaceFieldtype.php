@@ -6,6 +6,8 @@ use Statamic\Fields\Fieldtype;
 
 class GooglePlaceFieldtype extends Fieldtype
 {
+    protected $icon = 'earth';
+    
     /**
      * The blank/default value.
      *
