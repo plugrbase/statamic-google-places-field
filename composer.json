@@ -8,14 +8,10 @@
             "Plugrbase\\GooglePlacesField\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "Julien Legrand",
-            "email": "julien@nomala.com"
+    "autoload-dev": {
+        "psr-4": {
+            "Plugrbase\\GooglePlacesField\\Tests\\": "tests"
         }
-    ],
-    "require": {
-        "skagarwal/google-places-api": "^1.7"
     },
     "extra": {
         "statamic": {
@@ -27,5 +23,33 @@
                 "Plugrbase\\GooglePlacesField\\ServiceProvider"
             ]
         }
+    },
+    "authors": [
+        {
+            "name": "Julien Legrand",
+            "email": "julien@nomala.com"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "statamic/cms": "^3.0 || ^3.1",
+        "skagarwal/google-places-api": "^1.7"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^4.2",
+        "orchestra/testbench": "^4.0|^5.0|^6.0"
+    },
+    "scripts": {
+        "lint": [
+            "php-cs-fixer fix ./src"
+        ],
+        "test": [
+            "php -d memory_limit=-1 -d max_execution_time=0 ./vendor/bin/phpunit"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
     }
 }
