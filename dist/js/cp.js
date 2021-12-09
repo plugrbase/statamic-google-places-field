@@ -35,6 +35,14 @@ __webpack_require__.r(__webpack_exports__);
     return {//
     };
   },
+  created: function created() {
+    if (!this.value) {
+      this.value = {
+        name: '',
+        content: ''
+      };
+    }
+  },
   watch: {
     value: {
       deep: true,

@@ -23,6 +23,14 @@ export default {
       //
     };
   },
+  created() {
+    if (! this.value) {
+      this.value = {
+        name: '',
+        content: '',
+      };
+    }
+  },
   watch: {
     value: {
       deep: true,
