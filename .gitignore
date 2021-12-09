@@ -1,5 +1,6 @@
 npm-debug.log
 yarn-error.log
+.DS_Store
 
 storage/*.key
 .env
@@ -19,5 +20,6 @@ coverage
 docs
 phpstan.neon
 testbench.yaml
-vendor
+/vendor
 node_modules
+mix-manifest.json
