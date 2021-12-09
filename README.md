@@ -58,7 +58,7 @@ Insert the tags below into your antlers template.
 {{ g_place_data data="{ google_place.content }" }}
     {{ adr_address }}
     {{ business_status }}
-{{ /place:find }}
+{{ /g_place_data:find }}
 ```
 
 See [Google's Official documentation](https://developers.google.com/maps/documentation/places/web-service/search-find-place) for more information on all available data. 
