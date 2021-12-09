@@ -1,5 +1,5 @@
 <!-- statamic:hide -->
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/plugrbase/statamic-google-places-field)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/plugrbase/statamic-google-places-field?style=flat-square)
 ![Statamic 3.0+](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=flat-square&link=https://statamic.com)
 
 # Statamic Google Places Field
