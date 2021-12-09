@@ -19,7 +19,7 @@ composer require plugrbase/statamic-google-places-field
 Optionally publish the config file of this package:
 
 ```bash
-php artisan vendor:publish --provider="Plugrbase\StatamicGooglePlacesField\ServiceProvider"
+php artisan vendor:publish --provider="Plugrbase\GooglePlacesField\ServiceProvider"
 ```
 
 Add an environment variable. Provide the Google API key that you want to use for this project.
