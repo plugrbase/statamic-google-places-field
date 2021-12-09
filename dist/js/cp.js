@@ -43,6 +43,11 @@ __webpack_require__.r(__webpack_exports__);
       };
     }
   },
+  mounted: function mounted() {
+    if (!this.value.name) {
+      this.$refs.fetch_status.innerHTML = "Provide a Google Place Id or a search string";
+    }
+  },
   watch: {
     value: {
       deep: true,
@@ -220,9 +225,7 @@ var render = function () {
       1
     ),
     _vm._v(" "),
-    _c("div", { ref: "fetch_status", staticClass: "py-1 text-small" }, [
-      _vm._v("Provide a Google Place Id or a search string"),
-    ]),
+    _c("div", { ref: "fetch_status", staticClass: "py-1 text-small" }),
   ])
 }
 var staticRenderFns = []

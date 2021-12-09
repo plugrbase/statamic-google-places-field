@@ -7,7 +7,7 @@
             Fetch
         </button>
     </div>
-    <div ref="fetch_status" class="py-1 text-small">Provide a Google Place Id or a search string</div>
+    <div ref="fetch_status" class="py-1 text-small"></div>
   </div>
 </template>
 <script>
@@ -29,6 +29,11 @@ export default {
         name: '',
         content: '',
       };
+    }
+  },
+  mounted() {
+    if (! this.value.name) {
+        this.$refs.fetch_status.innerHTML = "Provide a Google Place Id or a search string";
     }
   },
   watch: {
