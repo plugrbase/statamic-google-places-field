@@ -81,6 +81,10 @@ This tag return the raw data fetched from the Google Places API.
 {{ google_place.content }}
 ```
 
+## Official Support
+
+If you're in need of some help, [send an email to](mailto:hello@plugrbase.com)!
+
 # License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+This addon is a commercial addon - you **must purchase a license** via the [Statamic Marketplace](https://statamic.com/addons/double-three-digital/simple-commerce) to use it in a production environment.
