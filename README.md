@@ -87,4 +87,4 @@ If you're in need of some help, [send an email to](mailto:hello@plugrbase.com)!
 
 # License
 
-This addon is a commercial addon - you **must purchase a license** via the [Statamic Marketplace](https://statamic.com/addons/double-three-digital/simple-commerce) to use it in a production environment.
+This addon is a commercial addon - you **must purchase a license** via the [Statamic Marketplace]([https://statamic.com/addons/double-three-digital/simple-commerce](https://statamic.com/addons/plugrbase/google-maps-places-field)) to use it in a production environment.
