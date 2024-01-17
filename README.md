@@ -1,12 +1,12 @@
 <!-- statamic:hide -->
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/plugrbase/statamic-google-places-field?style=flat-square)
-![Statamic 3.0+](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=flat-square&link=https://statamic.com)
+![Statamic 4.0+](https://img.shields.io/badge/Statamic-3.0+-FF269E?style=flat-square&link=https://statamic.com)
 
 # Statamic Google Places Field
 
 <!-- /statamic:hide -->
 
-A Google Places addon for Statamic V3 that fetch and store data from Google Places API.
+A Google Places addon for Statamic V4 that fetch and store data from Google Places API.
 
 # Installation
 
