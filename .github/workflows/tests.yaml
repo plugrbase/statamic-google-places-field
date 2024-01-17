@@ -10,16 +10,12 @@ jobs:
 
     strategy:
       matrix:
-        php: [8.2]
-        laravel: [10.*]
+        php: [8.0, 8.1, 8.2]
         statamic: [4.0.*]
         include:
-          - laravel: 10.*
-            testbench: 7.*
-          - laravel: 9.*
-            testbench: 7.*
+          - testbench: 7.*
 
-    name: ${{ matrix.php }} - ${{ matrix.statamic }} - ${{ matrix.laravel }}
+    name: ${{ matrix.php }} - Statamic ${{ matrix.statamic }}
 
     steps:
       - name: Checkout code
@@ -34,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" "statamic/cms:${{ matrix.statamic }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
+          composer require "statamic/cms:${{ matrix.statamic }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
           composer install --no-interaction
 
       - name: Run PHPUnit
