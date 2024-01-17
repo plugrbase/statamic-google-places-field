@@ -6,19 +6,18 @@ on:
 
 jobs:
   php_tests:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         php: [8.2]
         laravel: [10.*]
         statamic: [4.0.*]
-        os: [ubuntu-latest]
         include:
           - laravel: 10.*
-            testbench: 6.*
+            testbench: 7.*
           - laravel: 9.*
-            testbench: 6.*
+            testbench: 7.*
 
     name: ${{ matrix.php }} - ${{ matrix.statamic }} - ${{ matrix.laravel }}
 
