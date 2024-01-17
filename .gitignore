@@ -22,3 +22,4 @@ testbench.yaml
 /vendor
 node_modules
 mix-manifest.json
+.php-unit.cache
